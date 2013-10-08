@@ -10,3 +10,9 @@
 [submodule "src/Products.CMFPlone"]
 	path = src/Products.CMFPlone
 	url = https://github.com/Rudd-O/Products.CMFPlone.git
+[submodule "src/declinefm.policy"]
+	path = src/declinefm.policy
+	url = https://github.com/Rudd-O/declinefm.policy
+[submodule "src/declinefm.theme"]
+	path = src/declinefm.theme
+	url = https://github.com/Rudd-O/declinefm.theme
