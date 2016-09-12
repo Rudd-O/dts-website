@@ -56,6 +56,7 @@ data-dir = ${buildout:data-basedir}/{{ item }}
 extends = 
     base.cfg
     http://dist.plone.org/release/4.3/versions.cfg
+    versions.cfg
 
 # If you change your Plone version, you'll also need to update
 # the repository below.
@@ -90,16 +91,16 @@ eggs =
     Pillow
     bpython
 #   Products.PloneArticle is checked out in the products/ dir
-#   WANTED PRODUCTS
-    Products.LinguaPlone == 4.1.3
-    collective.ckeditor == 3.6.11
-    Products.PloneKeywordManager == 2.0
-    Products.DocFinderTab == 1.0.5
-    Products.RedirectionTool == 1.3.1
-    Products.PloneSoftwareCenter == 1.6.4
-    Products.Poi == 2.2.3
-    plone.app.dexterity [grok,relations] == 2.0.7
-    collective.twitterportlet == 0.10
+#   WANTED PRODUCTS versions pinned in versions.cfg
+    Products.LinguaPlone
+    collective.ckeditor
+    Products.PloneKeywordManager
+    Products.DocFinderTab
+    Products.RedirectionTool
+    Products.PloneSoftwareCenter
+    Products.Poi
+    plone.app.dexterity [grok,relations]
+    collective.twitterportlet
 #   DEVELOP-EGG VERSIONS
     collective.flowplayer
     collective.blog.feeds
@@ -235,26 +236,3 @@ parts =
 recipe = plone.recipe.precompiler
 eggs = ${buildout:eggs}
 compile-mo-files = true
-
-############################################
-# Versions Specification
-# ----------------------
-# Version information supplied here will "pin" Python packages to a particular
-# version number, even when you use the "newest" flag running buildout.
-# Specifying versions for all packages is a good idea and can prevent
-# accidental changes when you add new packages to your buildout.
-# Note that versions specified here will override those specified earlier
-# in the configuration, including those from the Plone and Zope version
-# config files.
-#
-[versions]
-Cheetah = 2.2.1
-Pillow = 1.7.5
-Products.DocFinderTab = 1.0.5
-ZopeSkel = 2.21.2
-collective.recipe.backup = 2.3
-collective.recipe.omelette = 0.12
-plone.recipe.command = 1.1
-plone.recipe.unifiedinstaller = 4.1
-lxml = 2.3.2
-Products.TinyMCE = 1.3.4
