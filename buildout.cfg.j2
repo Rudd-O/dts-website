@@ -55,13 +55,13 @@ data-dir = ${buildout:data-basedir}/{{ item }}
 
 extends = 
     base.cfg
-    http://dist.plone.org/release/4.3/versions.cfg
+    http://dist.plone.org/release/5.0.5/versions.cfg
     versions.cfg
 
 # If you change your Plone version, you'll also need to update
 # the repository below.
 find-links +=
-    http://dist.plone.org/release/4.3/
+    http://dist.plone.org/release/5.0.5/
 
 ############################################
 # Ports
@@ -91,16 +91,11 @@ eggs =
     Pillow
 #   Products.PloneArticle is checked out in the products/ dir
 #   WANTED PRODUCTS versions pinned in versions.cfg
-    Products.LinguaPlone
-    collective.ckeditor
     Products.PloneKeywordManager
     Products.DocFinderTab
     Products.RedirectionTool
-    plone.app.dexterity [grok,relations]
     collective.twitterportlet
 #   DEVELOP-EGG VERSIONS
-    collective.flowplayer
-    collective.blog.feeds
 
 ############################################
 # Optional Functionality
@@ -147,8 +142,6 @@ zcml =
 #
 # Provide the *paths* to the eggs you are developing here:
 develop =
-    src/collective.flowplayer
-    src/collective.blog.feeds
 
 ############################################
 # Debug Mode
