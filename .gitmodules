@@ -3,7 +3,7 @@
 	url = https://github.com/collective/collective.blog.feeds
 [submodule "src/collective.flowplayer"]
 	path = src/collective.flowplayer
-	url = https://github.com/Rudd-O/collective.flowplayer
+	url = https://github.com/collective/collective.flowplayer
 [submodule "src/contentratings"]
 	path = src/contentratings
 	url = https://github.com/collective/contentratings
