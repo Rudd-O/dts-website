@@ -55,13 +55,13 @@ data-dir = ${buildout:data-basedir}/{{ item }}
 
 extends = 
     base.cfg
-    http://dist.plone.org/release/5.0.5/versions.cfg
+    http://dist.plone.org/release/5.0.6/versions.cfg
     versions.cfg
 
 # If you change your Plone version, you'll also need to update
 # the repository below.
 find-links +=
-    http://dist.plone.org/release/5.0.5/
+    http://dist.plone.org/release/5.0.6/
 
 ############################################
 # Ports
@@ -95,6 +95,7 @@ eggs =
     Products.DocFinderTab
     Products.RedirectionTool
     collective.twitterportlet
+    Products.PloneHotfix20160830
 #   DEVELOP-EGG VERSIONS
 
 ############################################
