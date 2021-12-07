@@ -51,7 +51,7 @@ deployment-basedir = {{ deploymentdir }}
 data-basedir = {{ datadir }}
 
 # Place where this deployment keeps its data.
-data-dir = ${buildout:data-basedir}/{{ item }}
+data-dir = ${buildout:data-basedir}/{{ item.key }}
 
 extends = 
     base.cfg
@@ -71,7 +71,7 @@ find-links +=
 # ZEO Server
 zeo-address = ${buildout:data-dir}/var/zeosocket
 # Zope client 1
-http-address = {{ plone.deployments[item].zserver_address }}
+http-address = {{ item.value.zserver_address }}
 # Additional clients:
 
 # If you try to start Zope as root, it will change user id to run as
@@ -151,7 +151,7 @@ develop =
 # ----------
 # Change debug-mode to "on" to run in development mode.
 # 
-debug-mode = {{ plone.deployments[item].debug_mode }}
+debug-mode = {{ item.value.debug_mode }}
 # Add-on developers should turn deprecation warnings on
 deprecation-warnings = off
 # change verbose-security to "on" for useful security errors while developing
